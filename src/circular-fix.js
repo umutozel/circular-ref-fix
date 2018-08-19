@@ -13,13 +13,11 @@
         var seen = [];
 
         function fix(o) {
-            if (o instanceof Array) {
+            if (o instanceof Array)
                 return o.map(fix);
-            }
 
-            if (o instanceof Object && typeof o === 'object') {
+            if (o instanceof Object && typeof o === 'object')
                 return fixObject(o);
-            }
 
             return o;
         }
