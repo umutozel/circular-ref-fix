@@ -50,13 +50,11 @@
         var fixers = [];
 
         function fix(o) {
-            if (o instanceof Array) {
+            if (o instanceof Array)
                 return fixArray(o);
-            }
 
-            if (o instanceof Object && typeof o === 'object') {
+            if (o instanceof Object && typeof o === 'object')
                 return fixObject(o);
-            }
 
             return o;
         }
